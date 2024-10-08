@@ -10,5 +10,21 @@ body{
 /* Cards   */
 .bg-card{
     background-color: #10202F;
-    height: 500px;
+    height: 450px;
+    cursor: pointer;
+}
+
+/* Modal  */
+.song-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(16,32,47, 0.9);
+}
+
+.modal-card{
+    color: white;
+    background-color: transparent;
 }

@@ -35,7 +35,7 @@
         <div class="container" id="app">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col" v-for="(song,i) in songsList" :key="i">
-                    <div class="card bg-card text-light p-5">
+                    <div class="card bg-card text-light p-5" @click="getClickedSong(i)">
                         <img :src="song.poster" class="card-img-top" alt="...">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{song.title}} </h5>
@@ -44,6 +44,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- Modal  -->
+            <div class="song-modal d-flex justify-content-center align-items-center p-5" v-if="isActive">
+                <div class="card w-25 modal-card">
+                    <img :src="clickedSong.poster" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{clickedSong.title}} </h5>
+                        <p>{{clickedSong.author}}</p>
+                        <strong>{{clickedSong.year}}</strong>
+                    </div>
+                </div>
+                <button class="btn btn-close bg-white position-absolute top-0 end-0 m-3" @click="closeModal"></button>
             </div>
         </div>
     </Main>
