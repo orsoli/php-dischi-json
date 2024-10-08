@@ -33,12 +33,12 @@
         <div class="container mx-auto py-4" id="app">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                 <div class="col">
-                    <div class="card">
-                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card" v-for="(song,i) in songsList" :key="i">
+                        <img :src="song.poster" class="card-img-top" alt="...">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Card title</h5>
-                            <p>singer name</p>
-                            <strong>1988</strong>
+                            <h5 class="card-title">{{song.title}} </h5>
+                            <p>{{song.author}}</p>
+                            <strong>{{song.year}}</strong>
                         </div>
                     </div>
                 </div>
