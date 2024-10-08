@@ -1,0 +1,14 @@
+body{
+    background-color: #1D2D3C;
+}
+
+/* Generics  */
+.header{
+    background-color: #05131E;
+}
+
+/* Cards   */
+.bg-card{
+    background-color: #10202F;
+    height: 500px;
+}

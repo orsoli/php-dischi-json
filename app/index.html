@@ -10,6 +10,8 @@
 
     <!-- Link Bootstrap Css  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Link style CSS  -->
+    <link rel="stylesheet" href="./style/style.css">
     <!-- Vue3  -->
     <script defer src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
@@ -20,9 +22,9 @@
 <body>
     <!-- Header  -->
     <Header>
-        <nav class="navbar bg-body-secondary p-3 mb-3">
+        <nav class="navbar header text-light p-3 mb-3">
             <div class="container-fluid">
-                Header
+                Spotify
             </div>
         </nav>
     </Header>
@@ -30,10 +32,10 @@
     <!-- Main  -->
     <Main>
         <!-- Container  -->
-        <div class="container mx-auto py-4" id="app">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                <div class="col">
-                    <div class="card" v-for="(song,i) in songsList" :key="i">
+        <div class="container" id="app">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col" v-for="(song,i) in songsList" :key="i">
+                    <div class="card bg-card text-light p-5">
                         <img :src="song.poster" class="card-img-top" alt="...">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{song.title}} </h5>
